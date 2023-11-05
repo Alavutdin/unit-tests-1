@@ -1,6 +1,7 @@
 package seminars.first.Shop;
 
-public class Product {
+public class Product Comparable<Product>{
+
     private Integer cost; // Стоимость продукта
     private String title; // Название
 
@@ -20,4 +21,9 @@ public class Product {
     public void setTitle(String title) {
         this.title = title;
     }
+    @Override
+    public int compareTo(Product product) {
+        return this.getCost().compareTo(product.getCost());
+    }
+
 }

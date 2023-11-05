@@ -18,13 +18,14 @@ public class Shop {
     // Метод должен вернуть отсортированный по возрастанию по цене список продуктов
     public List<Product> sortProductsByPrice() {
         // Допишите реализацию метода самостоятельно
-        return null;
+        Collections.sort(products);
+        return products;
     }
 
     // Метод должен вернуть самый дорогой продукт
     public Product getMostExpensiveProduct() {
         // Допишите реализацию метода самостоятельно
-        return null;
+        return sortProductsByPrice().get(products.size()-1);
     }
 
 }
